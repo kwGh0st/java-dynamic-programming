@@ -1,21 +1,19 @@
 package main;
 
-import main.algorithms.CanSumMemoization;
+import main.algorithms.HowSumMemoization;
+
+import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
-       long[] arr1 = new long[] {2, 3};
-       long[] arr2 = new long[] {5, 3, 4, 7};
-       long[] arr3 = new long[] {2, 4};
-       long[] arr4 = new long[] {2, 3, 5};
-       long[] arr5 = new long[] {7, 14};
-       long[] arr6 = new long[] {7, 14, 8, 99, 32};
 
-        System.out.println(CanSumMemoization.canSum(7,arr1));
-        System.out.println(CanSumMemoization.canSum(7,arr2));
-        System.out.println(CanSumMemoization.canSum(7,arr3));
-        System.out.println(CanSumMemoization.canSum(8,arr4));
-        System.out.println(CanSumMemoization.canSum(300,arr5));
-        System.out.println(CanSumMemoization.canSum(10000, arr6));
+
+
+        System.out.println(HowSumMemoization.howSum(7, Arrays.asList(2, 3) )); // [3, 2, 2]
+        System.out.println(HowSumMemoization.howSum(7, Arrays.asList(5, 3, 4, 7))); // [4, 3]
+        System.out.println(HowSumMemoization.howSum(7, Arrays.asList(2, 4) )); // null
+        System.out.println(HowSumMemoization.howSum(8, Arrays.asList(2, 3, 5))); // [2, 2, 2, 2]
+        System.out.println(HowSumMemoization.howSum(300, Arrays.asList(7, 14))); // null
+
     }
 }
