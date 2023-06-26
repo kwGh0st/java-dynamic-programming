@@ -1,19 +1,16 @@
 package main;
 
-import main.algorithms.HowSumMemoization;
+import main.algorithms.CanConstructMemoization;
 
 import java.util.Arrays;
+
 
 public class Main {
     public static void main(String[] args) {
 
-
-
-        System.out.println(HowSumMemoization.howSum(7, Arrays.asList(2, 3) )); // [3, 2, 2]
-        System.out.println(HowSumMemoization.howSum(7, Arrays.asList(5, 3, 4, 7))); // [4, 3]
-        System.out.println(HowSumMemoization.howSum(7, Arrays.asList(2, 4) )); // null
-        System.out.println(HowSumMemoization.howSum(8, Arrays.asList(2, 3, 5))); // [2, 2, 2, 2]
-        System.out.println(HowSumMemoization.howSum(300, Arrays.asList(7, 14))); // null
-
+        System.out.println(CanConstructMemoization.canConstruct("abcdef", Arrays.asList("ab", "abc", "cd", "def", "abcd"))); // true
+        System.out.println(CanConstructMemoization.canConstruct("skateboard", Arrays.asList("bo", "rd", "ate", "t", "ska", "sk", "boar"))); //false
+        System.out.println(CanConstructMemoization.canConstruct("enterapotentpot", Arrays.asList("a", "p", "ent", "enter", "ot", "o", "t"))); //true
+        System.out.println(CanConstructMemoization.canConstruct("eeeeeeeeeeeeeeeeeeeeeeeeeeeeeef", Arrays.asList("e", "ee", "eee", "eeee", "eeeee"))); // false
     }
 }
